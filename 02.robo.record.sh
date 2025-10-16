@@ -20,7 +20,7 @@ hosted_zone="Z0240592U12NCJ6BG5HL"
     echo "$instance: $IP"
     
     aws route53 change-resource-record-sets \
-    --hosted-zone-id $ZONE_ID \
+    --hosted-zone-id $hosted_zone \
     --change-batch '
     {
         "Comment": "Updating record set"
