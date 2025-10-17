@@ -59,8 +59,9 @@ VALIDATE $? "unzip catalogue"
 npm install
 VALIDATE $? " installing dependenies/packages"
 
-cp catalogue.service /etc/systemd/system/catalogue.service
-VALIDATE $? " coping systemctl service"
+# Copy systemd service file
+cp /home/ec2-user/shell-roboshop/catalogue.service /etc/systemd/system/catalogue.service
+VALIDATE $? "copying systemctl service"
 
 systemctl daemon-reload
 
