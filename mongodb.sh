@@ -13,7 +13,7 @@ echo "Script started executed at: $(date)" | tee -a $LOG_FILE
 
 if [ $USERID -ne 0 ]; then
     echo "ERROR:: Please run this script with root privelege"
-    exit 1 # failure is other than 0
+    #exit 1 # failure is other than 0
 fi
 
 VALIDATE(){ # functions receive inputs through args just like shell script args
