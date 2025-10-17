@@ -29,9 +29,6 @@ VALIDATE $? "adding/copying mongorepo"
  
 dnf install mongodb-org -y & >>$LOG_FILE
 VALIDATE $? "istalling mongodb"
-sudo dnf clean all
-sudo dnf makecache
-
 systemctl enable mongod
 VALIDATE $? "enable mongodb"
 systemctl start mongod
