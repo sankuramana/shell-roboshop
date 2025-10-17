@@ -40,6 +40,7 @@ useradd --system --home /app --shell /sbin/nologin --comment "roboshop system us
 VALIDATE $? "creating sysytem user"
 else 
 echo "user already exist ..$Y SKIPPING $N"
+fi
 
 mkdir /app  &>>$LOG_FILE
 VALIDATE $? " creating appdirectoy"
