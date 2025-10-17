@@ -68,8 +68,10 @@ systemctl daemon-reload
 systemctl enable catalogue  &>>$LOG_FILE
 VALIDATE $? " enabling catalougue"
 
-cp mongo.repo /etc/yum.repos.d/mongo.repo &>>$LOG_FILE
-VALIDATE $? "copy mongo repo "
+cp /home/ec2-user/shell-roboshop/mongo.repo /etc/yum.repos.d/mongo.repo
+VALIDATE $? "adding/copying mongorepo"
+
+
 dnf install mongodb-mongosh -y &>>$LOG_FILE
 VALIDATE $? "istalling mongodb client"
 
