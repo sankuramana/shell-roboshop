@@ -51,14 +51,14 @@ VALIDATE $? "downloading catalouge application"
 cd /app
 VALIDATE $? "changing to app direcoty"
 rm -rf /app/*
-VALIDATE "removing existing code"
+VALIDATE  $? "removing existing code"
 
 unzip /tmp/catalogue.zip &>>$LOG_FILE
 VALIDATE $? "unzip catalogue"
 
 npm install
 VALIDATE $? " installing dependenies/packages"
- 
+
 cp catalogue.service /etc/systemd/system/catalogue.service
 VALIDATE $? " coping systemctl service"
 
