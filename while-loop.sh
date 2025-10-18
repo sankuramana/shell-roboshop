@@ -2,7 +2,7 @@
 
 count=$1
 echo "count down....."
-while [ $count -gt 25 ]
+while [ $count -ne 25 ]
 do
 echo " time left ::..$count"
 #count=$((count -1)) #decrement the count
