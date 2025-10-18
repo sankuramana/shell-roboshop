@@ -75,8 +75,8 @@ VALIDATE $? "adding/copying mongorepo"
 dnf install mongodb-mongosh -y &>>$LOG_FILE
 VALIDATE $? "istalling mongodb client"
 
-mongosh --host "$MONGODB_HOST" </app/db/master-data.js &>>$LOG_FILE
-VALIDATE $? "load mongodb host"
+mongosh --host $MONGODB_HOST </app/db/master-data.js &>>$LOG_FILE
+VALIDATE $? "load catalogue products "
 
 systemctl restart catalogue &>>$LOG_FILE
 VALIDATE $? "restarting catalogue"
